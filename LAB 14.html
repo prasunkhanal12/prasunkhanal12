@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 65%;
+            margin-top: 20px;
+        }
+        table {
+            
+            border-collapse: collapse;
+        }
+        td {
+            vertical-align: top;
+        }
+        .header {
+            background-color: #ff9500;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu {
+            background-color: #ffc107;
+            padding: 10px;
+        }
+        .menu a {
+            color: #0000EE;
+            padding: 5px 10px;
+            text-decoration: underline;
+        }
+        .menu a.active {
+            color: #0000FF;
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+            color: white;
+        }
+        .footer {
+            background-color: #ff9500;
+            color: black;
+            text-align: center;
+            padding: 10px;
+        }
+        .left-column {
+            width: 70%;
+            padding: 10px;
+            background-color: #9a9a9a;
+        }
+        .right-column {
+            width: 30%;
+            background-color: #d1eaff;
+            padding: 10px;
+            text-align: center;
+        }
+        .design {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 5px;
+        }
+        .left-column h1, .right-column h1 {
+            margin: 0;
+            padding: 10px 0;
+            font-size: 24px;
+        }
+        .left-column img {
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 175px;
+            margin-top: 20px;
+            width: 120px;
+            border: #333 4px solid;
+        }
+        .right-column img {
+            width: 120px;
+    
+            margin-bottom: 5px;
+        }
+        .right-column b {
+            display: block;
+            margin-bottom: 15px;
+        }
+        .left-column hr {
+            border: 0;
+            border-top: 2px solid white;
+            margin: 10px 0;
+        }
+        .right-column hr {
+            border: 0;
+            border-top: 2px solid orange;
+            margin: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <table border="1">
+        <!-- Header Row -->
+        <tr>
+            <td colspan="2" class="header">
+                <h1>Online Exam System</h1>
+            </td>
+        </tr>
+        
+        <!-- Menu Row -->
+        <tr>
+            <td colspan="2" class="menu">
+                <a href="#" class="active">HOME</a> ||
+                <a href="#">ABOUT US</a> ||
+                <a href="#">Courses</a> ||
+                <a href="#">Exam Date</a> ||
+                <a href="#">Result</a> ||
+                <a href="#">Gallery</a>
+            </td>
+        </tr>
+        
+        <!-- Welcome Marquee -->
+        <tr>
+            <td colspan="2" class="design">
+                <marquee><b><i><font color="white">Welcome to Online Exam System</font></i></b></marquee>
+            </td>
+        </tr>
+        
+        <!-- Main Content -->
+        <tr>
+            <td class="left-column">
+                <h1>Welcome to Online Exam System</h1>
+                <hr>
+                <div class="content">
+                    <img src="student.png" alt="Student Image" />
+                    <p>Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. To make your document look professionally produced, Word provides header, footer, cover page, and text box designs that complement each other. For example, you can add a matching cover page, header, and sidebar. Click Insert and then choose the elements you want from the different galleries.</p>
+                    <p>Themes and styles also help keep your document coordinated. When you click Design and choose a new Theme, the pictures, charts, and SmartArt graphics change to match your new theme. When you apply styles, your headings change to match the new theme. Save time in Word with new buttons that show up where you need them. To change the way a picture fits in your document, click it and a button for layout options appears next to it. When you work on a table, click where you want to add a row or a column, and then click the plus sign.</p>
+                </div>
+            </td>
+            <td class="right-column">
+                <h1>Our Members</h1>
+                <hr>
+                <marquee direction="up" height="300px">
+                    <center>
+                        <img src="student.png" alt="Director" /><br/><b>Director</b><br/><br/>
+                        <img src="student.png" alt="Manager" /><br/><b>Manager</b><br/><br/>
+                        <img src="student.png" alt="Sales Manager" /><br/><b>Sales Manager</b><br/><br/>
+                    </center>
+                </marquee>
+            </td>
+        </tr>
+        
+        <!-- Footer Row -->
+        <tr>
+            <td colspan="2" class="footer">
+                Copyright © 2022 All Rights Reserved
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

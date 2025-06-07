@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 600px;
+      margin: 20px auto;
+      border: 4px solid black;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      padding: 8px;
+      vertical-align: top;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Registration Form</h2>
+  <form>
+    <table>
+      <tr>
+        <td>Student Name</td>
+        <td>
+          <select>
+            <option>Mr.</option>
+            <option>Ms.</option>
+          </select>
+          <input type="text" name="student_name" placeholder="Enter Your Name">
+        </td>
+      </tr>
+      <tr>
+        <td>Father's Name</td>
+        <td><input type="text" name="father_name" placeholder="Enter your father's Name"></td>
+      </tr>
+      <tr>
+        <td>Mother's Name</td>
+        <td><input type="text" name="mother_name" placeholder="Enter your Mother's Name"></td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td><input type="date" name="dob"></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Email ID</td>
+        <td><input type="email" name="email"></td>
+      </tr>
+      <tr>
+        <td>Mobile No.</td>
+        <td><input type="text" name="mobile"></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><textarea name="address" rows="3"></textarea></td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td><input type="text" name="state"></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><input type="text" name="city"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Submit"></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+</body>
+</html>

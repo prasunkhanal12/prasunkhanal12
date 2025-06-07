@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .form-container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin: 10px 0;
+            font-size: 16px;
+            padding-bottom: 5px;
+        }
+        
+        /* Section heading style */
+        .form-section-heading {
+            position: relative;
+            border: 1px solid #000;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .form-section-heading p {
+            position: absolute;
+            top: -12px;
+            left: 15px;
+            background: white;
+            padding: 0 10px;
+            font-weight: bold;
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            padding: 5px;
+        }
+        .form-group label {
+            width: 20%;
+            text-align: left;
+            margin-right: 10px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            padding: 5px;
+            border: 1px solid #000;
+            background: none;
+            width: 50%;
+        }
+        .form-group input[type="date"] {
+            padding: 5px;
+            border: 1px solid #000;
+            background: none;
+        }
+        .form-group select{
+            margin-right: 10px;
+        }
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            margin: 0 5px 0 10px;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .qualifications {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0;
+            margin-bottom: 10px;
+        }
+        .qualifications div {
+            padding: 5px;
+        }
+        .qualifications .header {
+            font-weight: bold;
+        }
+        .language-knowledge {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            gap: 0;
+            margin-bottom: 10px;
+        }
+        .language-knowledge div {
+            padding: 5px;
+        }
+        .language-knowledge .header {
+            font-weight: 600;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            cursor: pointer;
+        }
+        input[type="file"] {
+            width: 70%;
+        }
+        select {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Application Form</h2>
+        <form>
+            <div class="form-section-heading">
+                <p>Personal Details</p>
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Applicant's full name</label>
+                            <select>
+                                <option>--Select--</option>
+                                <option>Mr.</option>
+                                <option>Mrs.</option>
+                                <option>Ms.</option>
+                            </select>
+                            <input type="text" name="full_name">
+                        </div>
+                        <div class="form-group">
+                            <label>Care Of</label>
+                            <div class="radio-group">
+                                <input type="radio" name="care_of" value="parents" checked> Parents
+                                <input type="radio" name="care_of" value="guardian"> Guardian
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="width: 100%;">
+                            <label>Father's Name</label>
+                            <select>
+                                <option>Mr.</option>
+                            </select>
+                            <input type="text" name="father_name">
+                        </div>
+                        <div class="form-group" style="width: 100%;">
+                            <label>Mother's Name</label>
+                            <select>
+                                <option>Mrs.</option>
+                            </select>
+                            <input type="text" name="mother_name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <div class="radio-group">
+                                <input type="radio" name="gender" value="male" checked> Male
+                                <input type="radio" name="gender" value="female"> Female
+                                <input type="radio" name="gender" value="others"> Others
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <input type="date" name="dob">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Marital Status</label>
+                            <select>
+                                <option>--Select--</option>
+                                <option>Single</option>
+                                <option>Married</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select>
+                                <option>--Select--</option>
+                                <option>General</option>
+                                <option>SC</option>
+                                <option>ST</option>
+                                <option>OBC</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Handicapped</label>
+                            <div class="radio-group">
+                                <input type="radio" name="handicapped" value="no" checked> No
+                                <input type="radio" name="handicapped" value="yes"> Yes
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Ex-Serviceman</label>
+                            <div class="radio-group">
+                                <input type="radio" name="ex_serviceman" value="no" checked> No
+                                <input type="radio" name="ex_serviceman" value="yes"> Yes
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>EWS</label>
+                            <div class="radio-group">
+                                <input type="radio" name="ews" value="no" checked> No
+                                <input type="radio" name="ews" value="yes"> Yes
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Religion</label>
+                            <select>
+                                <option>--Select--</option>
+                                <option>Hindu</option>
+                                <option>Muslim</option>
+                                <option>Christian</option>
+                                <option>Sikh</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-heading">
+                <p>Contact Details</p>
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            <input type="text" name="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label>Email ID</label>
+                            <input type="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Address Line 1</label>
+                            <input type="text" name="address1">
+                        </div>
+                        <div class="form-group">
+                            <label>Address Line 2</label>
+                            <input type="text" name="address2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>City</label>
+                            <input type="text" name="city">
+                        </div>
+                        <div class="form-group">
+                            <label>State</label>
+                            <select>
+                                <option>--Select--</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Delhi</option>
+                                <option>Karnataka</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="margin-right: 50%;">
+                            <label>PIN</label>
+                            <input type="text" name="pin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-heading">
+                <p>Qualification Details</p>
+                <div class="form-section">
+                    <div class="qualifications">
+                        <div class="header">Sr. No.</div>
+                        <div class="header">Qualification</div>
+                        <div class="header">Board/University</div>
+                        <div class="header">Passing Year</div>
+                        <div class="header">Max Marks</div>
+                        <div class="header">Marks Obtain</div>
+                        <div class="header">Percentage</div>
+                        
+                        <div>1</div>
+                        <div>
+                            <select>
+                                <option>--Select--</option>
+                                <option>10th</option>
+                                <option>12th</option>
+                                <option>Graduation</option>
+                            </select>
+                        </div>
+                        <div><input type="text" name="board1"></div>
+                        <div><input type="text" name="year1"></div>
+                        <div><input type="text" name="max_marks1"></div>
+                        <div><input type="text" name="marks_obtained1"></div>
+                        <div><input type="text" name="percentage1"></div>
+                        
+                        <div>2</div>
+                        <div>
+                            <select>
+                                <option>--Select--</option>
+                                <option>10th</option>
+                                <option>12th</option>
+                                <option>Graduation</option>
+                            </select>
+                        </div>
+                        <div><input type="text" name="board2"></div>
+                        <div><input type="text" name="year2"></div>
+                        <div><input type="text" name="max_marks2"></div>
+                        <div><input type="text" name="marks_obtained2"></div>
+                        <div><input type="text" name="percentage2"></div>
+                        
+                        <div>3</div>
+                        <div>
+                            <select>
+                                <option>--Select--</option>
+                                <option>10th</option>
+                                <option>12th</option>
+                                <option>Graduation</option>
+                            </select>
+                        </div>
+                        <div><input type="text" name="board3"></div>
+                        <div><input type="text" name="year3"></div>
+                        <div><input type="text" name="max_marks3"></div>
+                        <div><input type="text" name="marks_obtained3"></div>
+                        <div><input type="text" name="percentage3"></div>
+                        
+                        <div>4</div>
+                        <div>
+                            <select>
+                                <option>--Select--</option>
+                                <option>10th</option>
+                                <option>12th</option>
+                                <option>Graduation</option>
+                            </select>
+                        </div>
+                        <div><input type="text" name="board4"></div>
+                        <div><input type="text" name="year4"></div>
+                        <div><input type="text" name="max_marks4"></div>
+                        <div><input type="text" name="marks_obtained4"></div>
+                        <div><input type="text" name="percentage4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-heading">
+                <p>Language Knowledge</p>
+                <div class="form-section">
+                    <div class="language-knowledge">
+                        <div class="header">Language</div>
+                        <div class="header">Reading</div>
+                        <div class="header">Writing</div>
+                        <div class="header">Spoken</div>
+                        
+                        <div>Hindi</div>
+                        <div><input type="checkbox" name="hindi_reading"></div>
+                        <div><input type="checkbox" name="hindi_writing"></div>
+                        <div><input type="checkbox" name="hindi_spoken"></div>
+                        
+                        <div>English</div>
+                        <div><input type="checkbox" name="english_reading"></div>
+                        <div><input type="checkbox" name="english_writing"></div>
+                        <div><input type="checkbox" name="english_spoken"></div>
+                        
+                        <div>Urdu</div>
+                        <div><input type="checkbox" name="urdu_reading"></div>
+                        <div><input type="checkbox" name="urdu_writing"></div>
+                        <div><input type="checkbox" name="urdu_spoken"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-heading">
+                <p>Identification Details</p>
+                <div class="form-section">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Aadhar Card Number</label>
+                            <input type="text" name="aadhar">
+                        </div>
+                        <div class="form-group">
+                            <label>PAN Card Number</label>
+                            <input type="text" name="pan">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Upload Photo</label>
+                            <input type="file" name="photo">
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Signature</label>
+                            <input type="file" name="signature">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

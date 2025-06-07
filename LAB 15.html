@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: -1px;
+        }
+        table {
+            width: 60%;
+            border-collapse: separate;
+            border-spacing: 1;
+            border: 4px solid black;
+            border-width: 1px;
+            margin-left: 20%;
+            margin-top: 5%;
+        }
+        td {
+            padding: 5px;
+            border: 1.5px solid #000;
+        }
+        td:first-child {
+            width: 30%;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        textarea {
+            width: 40%;
+            padding: 5px;
+            border: 1px solid #000;
+        }
+        textarea {
+            height: 60px;
+            resize: vertical;
+        }
+        input[type="radio"] {
+            margin: 0 5px 0 10px;
+        }
+        .submit-btn[type="button"] {
+            background-color: #4CAF50;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+        <form>
+            <table>
+                <tr>
+                    <td colspan="2"><h1>Registration Form</h1></td>
+                </tr>
+                <tr>
+                    <td>Student Name</td>
+                    <td><input type="text" name="student_name"></td>
+                </tr>
+                <tr>
+                    <td>Father's Name</td>
+                    <td><input type="text" name="father_name"></td>
+                </tr>
+                <tr>
+                    <td>Mother's Name</td>
+                    <td><input type="text" name="mother_name"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" name="dob" placeholder="mm/dd/yyyy"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Mobile No.</td>
+                    <td><input type="text" name="mobile"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><input type="text" name="state"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" name="city"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="submit-btn">
+                        <button type="submit">Submit</button></td>
+                </tr>
+            </table>
+            
+        </form>
+    </div>
+</body>
+</html>
